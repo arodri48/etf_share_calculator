@@ -12,7 +12,9 @@ def runner(total_amt: float, etf_val_filepath: str):
 
     # Step 2: Carry out math to display results
     for key, val in etf_dict.items():
-        print(f"Shares of {key}: {total_amt * val[1] / val[0]}")
+        num_shares = total_amt * val[1] / val[0]
+        print(f"Shares of {key}: {num_shares:.2f}")
+
 
 if __name__ == "__main__":
     runner(4018, 'etf_vals.txt')
